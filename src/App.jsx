@@ -1,13 +1,10 @@
-
-import './App.css'
-import Logo from './components/Logo'
+import "./App.css";
+import Logo from "./components/Logo";
 
 export default function App() {
   return (
-   <>
-   <Logo/>
-   </>
-  )
+    <div >
+      <Logo />
+    </div>
+  );
 }
-
-

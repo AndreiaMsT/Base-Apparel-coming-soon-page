@@ -2,6 +2,20 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: "320px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "547px",
+      // => @media (min-width: 1024px) { ... }
+
+      lg: "768px",
+
+      xl: "1024px",
+
+      "2xl": "1680px",
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       colors: {
         red: {
