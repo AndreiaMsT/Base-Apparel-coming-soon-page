@@ -17,6 +17,9 @@ export default {
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
+      fontFamily: {
+        'josefin-sans': ['Josefin Sans', 'sans-serif'],
+      },
       colors: {
         red: {
           desaturated: "hsl(0, 36%, 70%)",
