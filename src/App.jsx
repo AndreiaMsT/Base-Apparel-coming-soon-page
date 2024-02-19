@@ -6,7 +6,7 @@ import InputEmail from "./components/InputEmail";
 
 export default function App() {
   return (
-    <div className="bg-pink-200">
+    <div className="bg-pink-200 ">
       <Logo />
       <Image />
       <Text/>
