@@ -1,33 +1,56 @@
 import ButtonArrow from "../images/icon-arrow.svg";
+import Error from "../images/icon-error.svg";
 import { useState } from "react";
 
 const InputEmail = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [input, setInput] = useState("");
+  const [error, setError] = useState(false);
+  const validateEmail = () => {
+    if (input.includes("@")) {
+      setError(false);
+    } else {
+      setError(true);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="mt-6 mb-6 flex w-96 relative max-w-md px-5 items-center justify-center">
+    <form className="relative sm:max-w-md sm:mx-auto">
+      <div
+        className={
+          "w-full flex justify-between items-center border  rounded-3xl " +
+          (error ? "border-pink-200" : "border-pink-500")
+        }
+      >
         <input
-          value={email}
+          onChange={(e) => setInput(e.target.value)}
+          value={input}
           id="email-address"
           name="email"
-          onChange={(e) => setEmail(e.target.value)}
           type="email"
-          autoComplete="email"
-          required
-          className="rounded-full mx-5 px-5 py-2.5 shadow-sm ring-1  ring-red-desaturated focus:ring-2 focus:ring-inset sm:text-sm bg-pink-200 placeholder-red-desaturated pr-16"
+          className="w-0 flex-1 pl-6 py-3 bg-transparent ring-pink-500 placeholder:text-red-desaturated placeholder:opacity-50"
           placeholder="Email Address"
         />
+        {error && (
+          <div className="pr-2">
+            <img src={Error} alt="" />
+          </div>
+        )}
         <button
           type="submit"
-          className="mr-5  absolute top-0 right-5 rounded-full bg-gradient-to-br from-pink-300 to-pink-500 px-5 py-2.5 text-sm font-semibold  hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          onClick={validateEmail}
+          className="bg-gradient-to-br from-pink-300 to-pink-500 hover:from-[#fad8d7] hover:to-[#f3baba] rounded-3xl px-7 flex justify-center items-center self-stretch text-2xl text-white shadow-lg shadow-pink-500"
         >
           <img src={ButtonArrow} alt="Submit Arrow" />
         </button>
+      </div>
+      <div
+        className={
+          (error ? "block" : "hidden") +
+          " absolute -bottom-10 text-red-desaturated px-5 py-2"
+        }
+      >
+        {" "}
+        Please provide a valid email
       </div>
     </form>
   );
