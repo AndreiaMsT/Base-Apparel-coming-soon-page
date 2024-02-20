@@ -14,10 +14,10 @@ const InputEmail = () => {
   };
 
   return (
-    <form className="relative sm:max-w-md sm:mx-auto">
+    <form className="relative sm:max-w-md sm:mx-auto m-5 pb-10">
       <div
         className={
-          "w-full flex justify-between items-center border  rounded-3xl " +
+          "w-full flex justify-between items-center border  rounded-3xl p-10" +
           (error ? "border-pink-200" : "border-pink-500")
         }
       >
@@ -27,11 +27,11 @@ const InputEmail = () => {
           id="email-address"
           name="email"
           type="email"
-          className="w-0 flex-1 pl-6 py-3 bg-transparent ring-pink-500 placeholder:text-red-desaturated placeholder:opacity-50"
+          className=" w-0 flex-1 pl-6 py-3 bg-transparent ring-pink-500 placeholder:text-red-desaturated placeholder:opacity-50"
           placeholder="Email Address"
         />
         {error && (
-          <div className="pr-2">
+          <div className="pr-2  bg-pink-50">
             <img src={Error} alt="" />
           </div>
         )}
@@ -46,7 +46,7 @@ const InputEmail = () => {
       <div
         className={
           (error ? "block" : "hidden") +
-          " absolute -bottom-10 text-red-desaturated px-5 py-2"
+          " absolute -bottom-10 text-red-desaturated px-5 py-2 bg-pink-200 w-96 "
         }
       >
         {" "}

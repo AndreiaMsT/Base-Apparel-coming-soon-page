@@ -4,13 +4,15 @@ import Image from "./components/Image";
 import Text from "./components/Text";
 import InputEmail from "./components/InputEmail";
 
+
 export default function App() {
   return (
-    <div className="bg-pink-200 ">
+    <div className="bg-pink-200  ">
       <Logo />
       <Image />
-      <Text/>
-      <InputEmail/>
+      <Text />
+      <InputEmail />
+     
     </div>
   );
 }
