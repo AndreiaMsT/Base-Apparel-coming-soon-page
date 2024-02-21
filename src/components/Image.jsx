@@ -6,12 +6,12 @@ const Image = () => {
         <div className="w-full">
           <img
             src={MobilePicture}
-            className="block w-full md:hidden" // This displays for small devices only
+            className="order-1 h-max w-full md:hidden" 
             alt="Mobile Picture"
           />
           <img
             src={DesktopPicture}
-            className="hidden w-full md:block" // This displays for larger devices
+            className="order-2 hidden h-screen w-max md:block" 
             alt="Desktop Picture"
           />
         </div>

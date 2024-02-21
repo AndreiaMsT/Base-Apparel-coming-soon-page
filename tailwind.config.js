@@ -4,21 +4,37 @@ export default {
   theme: {
     screens: {
       sm: "320px",
-      // => @media (min-width: 640px) { ... }
-
+    
       md: "547px",
-      // => @media (min-width: 1024px) { ... }
-
+     
       lg: "768px",
 
       xl: "1024px",
 
       "2xl": "1680px",
-      // => @media (min-width: 1280px) { ... }
+    
     },
     extend: {
       fontFamily: {
-        'josefin-sans': ['Josefin Sans', 'sans-serif'],
+        "josefin-sans": ["Josefin Sans", "sans-serif"],
+      },
+      backgroundImage: {
+        firstGradient:
+          "linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))",
+        secondGradient:
+          "linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))",
+        errorIcon: "url('./images/icon-error.svg')",
+        patternDesktop: "url('./images/bg-pattern-desktop.svg')",
+      },
+      lineHeight: {
+        heading: "0.75",
+      },
+      letterSpacing: {
+        heading: "1.5rem",
+      },
+      backgroundPosition: {
+        invalid: "center right 8rem",
+        invalidMobile: "center right 5rem",
       },
       colors: {
         red: {
